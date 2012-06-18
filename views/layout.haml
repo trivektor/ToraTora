@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %title Tora Tora
+    %meta{:name => "description", :content => "A simple application that demonstrates usage Pusher API"}
+    %meta{:name => "author", :content => "Tri Vuong"}
+    = stylesheet_link_tag     "http://fonts.googleapis.com/css?family=Montserrat", "stylesheets/tora.css"
+  %body
+    = javascript_include_tag  "javascripts/lib/jquery.js", "javascripts/lib/underscore.js", "javascripts/lib/backbone.js", "javascripts/lib/pusher.js"
+    = yield

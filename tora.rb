@@ -22,3 +22,13 @@ end
 post "/chat" do
   Pusher['tora-channel'].trigger('respond', params[:text])
 end
+
+post "/rooms" do
+  channel = Pusher::Channel.new(URI("http://localhost:9393"), params[:name])
+  {success: 1, channel: channel.name}.to_json
+end
+
+get "/rooms/:id" do
+  session[:room] = params[:id]
+  haml :"rooms/show"
+end

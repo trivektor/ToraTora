@@ -1,21 +1,5 @@
-!!!
-%html
-  %head
-    %title Tora Tora
-    %meta{:name => "description", :content => "A simple application that demonstrates usage Pusher API"}
-    %meta{:name => "author", :content => "Tri Vuong"}
-    = stylesheet_link_tag     "http://fonts.googleapis.com/css?family=Montserrat",
-                              "css/tora.css"
-    = javascript_include_tag  "javascript/jquery.js",
-                              "javascript/underscore.js", 
-                              "javascript/backbone.js",
-                              "javascript/pusher.js",
-                              "javascript/models/tora.js",
-                              "javascript/toratora.js"
-  %body
+#new_game_room
+  %p Create new game room
+  %input{:type => :text, :id => :room_name, :placeholder => 'Game room'}
   
-    %input{:type => :text, :id => :message}
-    
-    %br
-    
-    %ul#list
+= javascript_include_tag "javascripts/locale/en.js", "javascripts/models/room.js", "javascripts/views/createRoomView.js", "javascripts/initializers/index.js"
